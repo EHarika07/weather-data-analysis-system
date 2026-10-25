@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Weather Analytics Dashboard</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <nav class="navbar">
+
+        <div class="nav-title">
+            🌤 Weather Analytics
+        </div>
+
+        <div class="nav-links">
+            <a href="/">🏠 Dashboard</a>
+            <a href="/analysis">📊 Analysis</a>
+            <a href="/city-comparison">🏙️ Compare Cities</a>
+        </div>
+
+    </nav>
+
+    <h1>Weather Analytics Dashboard</h1>
+
+    <div class="dashboard-card">
+
+        <h2>Weather Data Analysis System</h2>
+
+        <p>
+            Upload weather data to analyze temperature,
+            humidity and rainfall across different cities.
+        </p>
+
+        <form action="/upload"
+              method="POST"
+              enctype="multipart/form-data">
+
+            <h3>Upload Weather CSV Files</h3>
+
+            <p>
+                Select one or more CSV files
+            </p>
+
+            <input type="file"
+                   name="files"
+                   accept=".csv"
+                   multiple
+                   required>
+
+            <button type="submit">
+                Upload & Analyze
+            </button>
+
+        </form>
+
+    </div>
+
+</body>
+
+</html>

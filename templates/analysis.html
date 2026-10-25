@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Weather Analysis</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <nav class="navbar">
+
+        <div class="nav-title">
+            🌤 Weather Analytics
+        </div>
+
+        <div class="nav-links">
+            <a href="/">🏠 Dashboard</a>
+            <a href="/analysis">📊 Analysis</a>
+            <a href="/city-comparison">🏙️ Compare Cities</a>
+        </div>
+
+    </nav>
+
+    <h1>📊 Weather Analysis Dashboard</h1>
+
+    <div class="container">
+
+        <h2>Weather Overview</h2>
+
+        <div class="summary-container">
+
+            <div class="summary-card">
+                <h3>Total Records</h3>
+                <p>{{ total_records }}</p>
+            </div>
+
+            <div class="summary-card">
+                <h3>Average Temperature</h3>
+                <p>{{ average_temperature }} °C</p>
+            </div>
+
+            <div class="summary-card">
+                <h3>Average Humidity</h3>
+                <p>{{ average_humidity }} %</p>
+            </div>
+
+            <div class="summary-card">
+                <h3>Total Rainfall</h3>
+                <p>{{ total_rainfall }} mm</p>
+            </div>
+
+            <div class="summary-card">
+                <h3>Highest Temperature</h3>
+                <p>{{ highest_temperature }} °C</p>
+            </div>
+
+        </div>
+
+        <h2>Monthly Weather Analysis</h2>
+
+        <div class="result-card">
+
+            <table>
+
+                <tr>
+                    <th>Month</th>
+                    <th>Average Temperature</th>
+                    <th>Maximum Temperature</th>
+                    <th>Minimum Temperature</th>
+                    <th>Average Humidity</th>
+                    <th>Total Rainfall</th>
+                </tr>
+
+                {% for row in monthly %}
+
+                <tr>
+
+                    <td>{{ row.month }}</td>
+
+                    <td>
+                        {{ "%.2f"|format(row.average_temperature) }} °C
+                    </td>
+
+                    <td>
+                        {{ "%.2f"|format(row.maximum_temperature) }} °C
+                    </td>
+
+                    <td>
+                        {{ "%.2f"|format(row.minimum_temperature) }} °C
+                    </td>
+
+                    <td>
+                        {{ "%.2f"|format(row.average_humidity) }} %
+                    </td>
+
+                    <td>
+                        {{ "%.2f"|format(row.total_rainfall) }} mm
+                    </td>
+
+                </tr>
+
+                {% endfor %}
+
+            </table>
+
+        </div>
+
+        <h2>Weather Trends</h2>
+
+        <div class="chart-card">
+
+            <h3>🌡️ Monthly Average Temperature</h3>
+
+            <img src="{{ url_for(
+                'static',
+                filename='charts/temperature.png'
+            ) }}"
+            alt="Monthly Average Temperature">
+
+        </div>
+
+        <div class="chart-card">
+
+            <h3>💧 Monthly Average Humidity</h3>
+
+            <img src="{{ url_for(
+                'static',
+                filename='charts/humidity.png'
+            ) }}"
+            alt="Monthly Average Humidity">
+
+        </div>
+
+        <div class="chart-card">
+
+            <h3>🌧️ Monthly Total Rainfall</h3>
+
+            <img src="{{ url_for(
+                'static',
+                filename='charts/rainfall.png'
+            ) }}"
+            alt="Monthly Total Rainfall">
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>
+

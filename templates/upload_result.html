@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Upload Result</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <h1>Weather Data Analysis System</h1>
+
+    <div class="result-card">
+
+        <h2>Data Quality Report</h2>
+
+        <div class="quality-container">
+
+            <div class="quality-card">
+                <h3>Total Records</h3>
+                <p>{{ total_rows }}</p>
+            </div>
+
+            <div class="quality-card">
+                <h3>Valid Records</h3>
+                <p>{{ valid_count }}</p>
+            </div>
+
+            <div class="quality-card">
+                <h3>Invalid Records</h3>
+                <p>{{ invalid_count }}</p>
+            </div>
+
+            <div class="quality-card">
+                <h3>Missing Values</h3>
+                <p>{{ missing_count }}</p>
+            </div>
+
+            <div class="quality-card">
+                <h3>Duplicate Records</h3>
+                <p>{{ duplicate_count }}</p>
+            </div>
+
+        </div>
+
+        <h3>Missing Values by Column</h3>
+
+        <table>
+            <tr>
+                <th>Column</th>
+                <th>Missing Values</th>
+            </tr>
+
+            {% for column, count in missing_by_column.items() %}
+            <tr>
+                <td>{{ column }}</td>
+                <td>{{ count }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+
+        <div class="page-buttons">
+
+            <a href="/">
+                <button>Back to Dashboard</button>
+            </a>
+
+            <a href="/analysis">
+                <button>View Analysis</button>
+            </a>
+
+        </div>
+
+    </div>
+
+</body>
+</html>

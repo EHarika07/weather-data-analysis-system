@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>City Weather Comparison</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <h1>🏙️ City Weather Comparison</h1>
+
+    <div class="container">
+
+        <h2>Weather Comparison</h2>
+
+        <p>
+            Compare temperature, humidity and rainfall
+            across different cities.
+        </p>
+
+        <div class="result-card">
+
+            <table>
+
+                <tr>
+                    <th>City</th>
+                    <th>Average Temperature</th>
+                    <th>Average Humidity</th>
+                    <th>Total Rainfall</th>
+                    <th>Highest Temperature</th>
+                </tr>
+
+                {% for city in cities %}
+
+                <tr>
+
+                    <td>{{ city.location }}</td>
+
+                    <td>
+                        {{ city.average_temperature }} °C
+                    </td>
+
+                    <td>
+                        {{ city.average_humidity }} %
+                    </td>
+
+                    <td>
+                        {{ city.total_rainfall }} mm
+                    </td>
+
+                    <td>
+                        {{ city.highest_temperature }} °C
+                    </td>
+
+                </tr>
+
+                {% endfor %}
+
+            </table>
+
+        </div>
+
+
+        <h2>City Comparison Charts</h2>
+
+
+        <div class="chart-card">
+
+            <h3>🌡️ Average Temperature by City</h3>
+
+            <img src="{{ url_for(
+                'static',
+                filename='charts/city_temperature.png'
+            ) }}"
+            alt="Average Temperature by City">
+
+        </div>
+
+
+        <div class="chart-card">
+
+            <h3>💧 Average Humidity by City</h3>
+
+            <img src="{{ url_for(
+                'static',
+                filename='charts/city_humidity.png'
+            ) }}"
+            alt="Average Humidity by City">
+
+        </div>
+
+
+        <div class="chart-card">
+
+            <h3>🌧️ Total Rainfall by City</h3>
+
+            <img src="{{ url_for(
+                'static',
+                filename='charts/city_rainfall.png'
+            ) }}"
+            alt="Total Rainfall by City">
+
+        </div>
+
+
+        <div class="page-buttons">
+
+            <a href="/">
+                <button>🏠 Dashboard</button>
+            </a>
+
+            <a href="/analysis">
+                <button>📊 Weather Analysis</button>
+            </a>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Error</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <h1>Weather Data Analysis System</h1>
+
+    <div class="result-card">
+
+        <h2>Something went wrong</h2>
+
+        <p>{{ message }}</p>
+
+        <a href="/">
+            <button>Back to Dashboard</button>
+        </a>
+
+    </div>
+
+</body>
+</html>
