@@ -1,6 +1,4 @@
 # weather-data-analysis-system
-# weather-data-analysis-system
-# Weather Data Analysis System
 
 ## About the Project
 
