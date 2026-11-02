@@ -27,7 +27,10 @@ def create_charts(monthly):
     plt.plot(
         monthly["month"],
         monthly["average_temperature"],
-        marker="o"
+        marker="o",
+        color="#ff8c42",
+        linewidth=3,
+        markersize=8
     )
     plt.title("Monthly Average Temperature")
     plt.xlabel("Month")
@@ -41,7 +44,10 @@ def create_charts(monthly):
     plt.plot(
         monthly["month"],
         monthly["average_humidity"],
-        marker="o"
+        marker="o",
+        color="#ff8c42",
+        linewidth=3,
+        markersize=8
     )
     plt.title("Monthly Average Humidity")
     plt.xlabel("Month")
@@ -55,7 +61,10 @@ def create_charts(monthly):
     plt.plot(
         monthly["month"],
         monthly["total_rainfall"],
-        marker="o"
+        marker="o",
+        color="#ff8c42",
+        linewidth=3,
+        markersize=8
     )
     plt.title("Monthly Total Rainfall")
     plt.xlabel("Month")
@@ -653,7 +662,8 @@ def city_comparison():
 
     plt.bar(
         city_data["location"],
-        city_data["average_temperature"]
+        city_data["average_temperature"],
+        color="#ff8c42"
     )
 
     plt.title(
@@ -680,7 +690,8 @@ def city_comparison():
 
     plt.bar(
         city_data["location"],
-        city_data["average_humidity"]
+        city_data["average_humidity"],
+        color="#ff8c42"
     )
 
     plt.title(
@@ -707,7 +718,8 @@ def city_comparison():
 
     plt.bar(
         city_data["location"],
-        city_data["total_rainfall"]
+        city_data["total_rainfall"],
+        color="#ff8c42"
     )
 
     plt.title(
