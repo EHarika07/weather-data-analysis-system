@@ -7,24 +7,24 @@
 body {
     min-height: 100vh;
     font-family: Arial, Helvetica, sans-serif;
-    color: #17324d;
+    color: #ffffff;
 
     background:
         radial-gradient(
-            circle at 15% 10%,
-            rgba(255, 255, 255, 0.95),
-            transparent 30%
+            circle at 15% 15%,
+            rgba(255, 112, 0, 0.12),
+            transparent 25%
         ),
         radial-gradient(
-            circle at 85% 15%,
-            rgba(255, 255, 255, 0.65),
-            transparent 30%
+            circle at 85% 20%,
+            rgba(0, 140, 255, 0.10),
+            transparent 25%
         ),
         linear-gradient(
             135deg,
-            #87ceeb 0%,
-            #b9e8f7 45%,
-            #eaf9fd 100%
+            #020305 0%,
+            #080d14 45%,
+            #030508 100%
         );
 
     background-attachment: fixed;
@@ -37,7 +37,7 @@ body {
 
 nav {
     width: 100%;
-    min-height: 68px;
+    min-height: 70px;
 
     padding: 0 35px;
 
@@ -45,16 +45,15 @@ nav {
     align-items: center;
     justify-content: space-between;
 
-    background: rgba(255, 255, 255, 0.88);
+    background: rgba(5, 8, 13, 0.92);
 
-    border-bottom:
-        1px solid rgba(255, 255, 255, 0.8);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
 
     box-shadow:
-        0 5px 25px rgba(43, 117, 150, 0.15);
+        0 5px 25px rgba(0, 0, 0, 0.7);
 
-    backdrop-filter: blur(14px);
-    -webkit-backdrop-filter: blur(14px);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
 
     position: sticky;
     top: 0;
@@ -62,7 +61,7 @@ nav {
 }
 
 nav a {
-    color: #315b78;
+    color: #d7d7d7;
 
     text-decoration: none;
 
@@ -75,13 +74,13 @@ nav a {
 }
 
 nav a:hover {
-    color: #1689bd;
+    color: #ff8a1c;
 }
 
 nav a:first-child {
-    color: #12618a;
+    color: #ffffff;
 
-    font-size: 21px;
+    font-size: 20px;
     font-weight: 700;
 
     padding: 10px 15px;
@@ -89,12 +88,18 @@ nav a:first-child {
     border-radius: 12px;
 
     background:
-        rgba(135, 206, 235, 0.25);
+        linear-gradient(
+            135deg,
+            rgba(255, 120, 20, 0.22),
+            rgba(255, 80, 0, 0.08)
+        );
+
+    border: 1px solid rgba(255, 130, 30, 0.25);
 }
 
 nav a:first-child:hover {
     background:
-        rgba(135, 206, 235, 0.45);
+        rgba(255, 120, 20, 0.3);
 }
 
 nav div {
@@ -110,21 +115,21 @@ nav div {
 h1 {
     text-align: center;
 
-    padding: 42px 20px 22px;
+    padding: 45px 20px 25px;
 
-    color: #123b59;
+    color: #ffffff;
 
-    font-size: 34px;
+    font-size: 36px;
     font-weight: 700;
 
-    letter-spacing: 0.3px;
+    letter-spacing: 2px;
 
     text-shadow:
-        0 2px 8px rgba(255, 255, 255, 0.7);
+        0 0 18px rgba(255, 255, 255, 0.15);
 }
 
 h2 {
-    color: #174c70;
+    color: #ffffff;
 
     margin-bottom: 20px;
 
@@ -132,7 +137,7 @@ h2 {
 }
 
 h3 {
-    color: #245b7d;
+    color: #eeeeee;
 
     margin-bottom: 10px;
 }
@@ -140,7 +145,7 @@ h3 {
 p {
     line-height: 1.7;
 
-    color: #55758a;
+    color: #c9c9c9;
 }
 
 a {
@@ -152,7 +157,8 @@ a {
    ========================= */
 
 button {
-    border: none;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+
     outline: none;
 
     cursor: pointer;
@@ -160,13 +166,14 @@ button {
     font-family: inherit;
 
     padding: 12px 23px;
+
     margin: 8px;
 
     background:
         linear-gradient(
             135deg,
-            #2196d3,
-            #147db5
+            #ff941f,
+            #e85d00
         );
 
     color: white;
@@ -174,10 +181,11 @@ button {
     border-radius: 11px;
 
     font-size: 15px;
+
     font-weight: 600;
 
     box-shadow:
-        0 7px 18px rgba(27, 132, 183, 0.28);
+        0 7px 20px rgba(255, 100, 0, 0.25);
 
     transition: 0.25s ease;
 }
@@ -188,12 +196,12 @@ button:hover {
     background:
         linear-gradient(
             135deg,
-            #2da9e6,
-            #1688c2
+            #ffad42,
+            #f36b08
         );
 
     box-shadow:
-        0 11px 25px rgba(27, 132, 183, 0.38);
+        0 12px 30px rgba(255, 100, 0, 0.4);
 }
 
 button:active {
@@ -201,12 +209,12 @@ button:active {
 }
 
 /* =========================
-   DASHBOARD
+   DASHBOARD CARD
    ========================= */
 
 .dashboard-card {
     width: 90%;
-    max-width: 970px;
+    max-width: 1000px;
 
     margin: 25px auto;
 
@@ -215,34 +223,41 @@ button:active {
     text-align: center;
 
     background:
-        rgba(255, 255, 255, 0.88);
+        linear-gradient(
+            145deg,
+            rgba(255, 111, 0, 0.18),
+            rgba(255, 70, 0, 0.08)
+        );
 
     border:
-        1px solid rgba(255, 255, 255, 0.95);
+        1px solid rgba(255, 125, 30, 0.4);
 
-    border-radius: 26px;
+    border-radius: 28px;
 
     box-shadow:
-        0 20px 50px rgba(40, 111, 145, 0.18);
+        0 20px 60px rgba(0, 0, 0, 0.7),
+        0 0 35px rgba(255, 90, 0, 0.12);
 
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
 
     animation: fadeUp 0.6s ease;
 }
 
 .dashboard-card h2 {
-    font-size: 29px;
+    font-size: 30px;
 
     margin-bottom: 18px;
 
-    color: #174c70;
+    color: #ffffff;
 }
 
 .dashboard-card p {
     max-width: 700px;
 
     margin: 0 auto 25px;
+
+    color: #d0d0d0;
 }
 
 .dashboard-card form {
@@ -251,16 +266,18 @@ button:active {
     padding: 32px;
 
     background:
-        rgba(235, 249, 254, 0.90);
+        rgba(5, 9, 15, 0.75);
 
     border:
-        1px solid rgba(135, 206, 235, 0.45);
+        1px solid rgba(255, 255, 255, 0.12);
 
     border-radius: 20px;
 }
 
 .dashboard-card form h3 {
     font-size: 20px;
+
+    color: #ffffff;
 }
 
 /* =========================
@@ -277,14 +294,15 @@ input[type="file"] {
 
     padding: 15px;
 
-    background: #ffffff;
+    background:
+        rgba(255, 255, 255, 0.06);
 
     border:
-        2px dashed #73bddb;
+        2px dashed rgba(255, 133, 30, 0.55);
 
     border-radius: 13px;
 
-    color: #55758a;
+    color: #dddddd;
 
     cursor: pointer;
 
@@ -292,12 +310,13 @@ input[type="file"] {
 }
 
 input[type="file"]:hover {
-    border-color: #2196d3;
+    border-color: #ff8a1c;
 
-    background: #f7fdff;
+    background:
+        rgba(255, 120, 20, 0.08);
 
     box-shadow:
-        0 0 18px rgba(33, 150, 211, 0.12);
+        0 0 20px rgba(255, 120, 20, 0.15);
 }
 
 /* =========================
@@ -321,7 +340,7 @@ input[type="file"]:hover {
     grid-template-columns:
         repeat(auto-fit, minmax(190px, 1fr));
 
-    gap: 20px;
+    gap: 18px;
 
     margin-bottom: 42px;
 }
@@ -332,39 +351,47 @@ input[type="file"]:hover {
     text-align: center;
 
     background:
-        rgba(255, 255, 255, 0.90);
+        linear-gradient(
+            145deg,
+            rgba(20, 25, 32, 0.95),
+            rgba(5, 9, 14, 0.95)
+        );
 
     border:
-        1px solid rgba(255, 255, 255, 0.95);
+        1px solid rgba(255, 255, 255, 0.12);
 
-    border-radius: 19px;
+    border-radius: 18px;
 
     box-shadow:
-        0 10px 28px rgba(40, 111, 145, 0.14);
+        0 12px 35px rgba(0, 0, 0, 0.6);
 
     transition: 0.25s ease;
+
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
 }
 
 .summary-card:hover {
     transform: translateY(-5px);
 
-    box-shadow:
-        0 16px 35px rgba(40, 111, 145, 0.22);
-
     border-color:
-        rgba(75, 174, 218, 0.45);
+        rgba(255, 125, 30, 0.55);
+
+    box-shadow:
+        0 16px 40px rgba(0, 0, 0, 0.7),
+        0 0 20px rgba(255, 100, 0, 0.12);
 }
 
 .summary-card h3 {
     font-size: 15px;
 
-    color: #55758a;
+    color: #bcbcbc;
 }
 
 .summary-card p {
     margin-top: 10px;
 
-    color: #1685ba;
+    color: #ff8a1c;
 
     font-size: 27px;
 
@@ -383,20 +410,20 @@ input[type="file"]:hover {
     padding: 32px;
 
     background:
-        rgba(255, 255, 255, 0.91);
+        rgba(10, 15, 22, 0.92);
 
     border:
-        1px solid rgba(255, 255, 255, 0.95);
+        1px solid rgba(255, 255, 255, 0.12);
 
     border-radius: 21px;
 
     box-shadow:
-        0 12px 32px rgba(40, 111, 145, 0.16);
+        0 15px 40px rgba(0, 0, 0, 0.65);
 
     overflow-x: auto;
 
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
 }
 
 /* =========================
@@ -422,12 +449,12 @@ input[type="file"]:hover {
     background:
         linear-gradient(
             145deg,
-            #ffffff,
-            #eefaff
+            rgba(30, 35, 42, 0.95),
+            rgba(7, 11, 16, 0.95)
         );
 
     border:
-        1px solid #d5edf7;
+        1px solid rgba(255, 255, 255, 0.12);
 
     border-radius: 16px;
 
@@ -437,14 +464,17 @@ input[type="file"]:hover {
 .quality-card:hover {
     transform: translateY(-4px);
 
+    border-color:
+        rgba(255, 130, 30, 0.45);
+
     box-shadow:
-        0 10px 24px rgba(40, 111, 145, 0.16);
+        0 10px 28px rgba(0, 0, 0, 0.65);
 }
 
 .quality-card h3 {
     font-size: 15px;
 
-    color: #55758a;
+    color: #bbbbbb;
 }
 
 .quality-card p {
@@ -454,7 +484,7 @@ input[type="file"]:hover {
 
     font-weight: bold;
 
-    color: #1685ba;
+    color: #ff8a1c;
 }
 
 /* =========================
@@ -468,14 +498,15 @@ table {
 
     min-width: 700px;
 
-    background: #ffffff;
+    background:
+        #080c12;
 
     border-radius: 13px;
 
     overflow: hidden;
 
     box-shadow:
-        0 5px 18px rgba(40, 111, 145, 0.08);
+        0 5px 20px rgba(0, 0, 0, 0.5);
 }
 
 th {
@@ -484,8 +515,8 @@ th {
     background:
         linear-gradient(
             135deg,
-            #4aafd8,
-            #218bc2
+            #ff8a1c,
+            #d94f00
         );
 
     color: white;
@@ -500,20 +531,22 @@ td {
 
     text-align: center;
 
-    color: #47677c;
+    color: #d2d2d2;
 
     border-bottom:
-        1px solid #e1f0f6;
+        1px solid rgba(255, 255, 255, 0.08);
 
     font-size: 14px;
 }
 
 tr:nth-child(even) {
-    background: #f3fbfe;
+    background:
+        rgba(255, 255, 255, 0.025);
 }
 
 tr:hover {
-    background: #e3f6fc;
+    background:
+        rgba(255, 120, 20, 0.08);
 }
 
 /* =========================
@@ -529,7 +562,7 @@ ul {
 li {
     margin: 8px 0;
 
-    color: #55758a;
+    color: #cccccc;
 }
 
 /* =========================
@@ -546,22 +579,29 @@ li {
     text-align: center;
 
     background:
-        rgba(255, 255, 255, 0.91);
+        linear-gradient(
+            145deg,
+            rgba(12, 17, 24, 0.96),
+            rgba(4, 7, 11, 0.96)
+        );
 
     border:
-        1px solid rgba(255, 255, 255, 0.95);
+        1px solid rgba(255, 255, 255, 0.12);
 
     border-radius: 21px;
 
     box-shadow:
-        0 12px 32px rgba(40, 111, 145, 0.16);
+        0 15px 40px rgba(0, 0, 0, 0.65);
 
     transition: 0.25s ease;
 }
 
 .chart-card:hover {
+    border-color:
+        rgba(255, 125, 30, 0.4);
+
     box-shadow:
-        0 16px 38px rgba(40, 111, 145, 0.21);
+        0 18px 45px rgba(0, 0, 0, 0.75);
 }
 
 .chart-card h3 {
@@ -569,7 +609,7 @@ li {
 
     font-size: 19px;
 
-    color: #245b7d;
+    color: #ffffff;
 }
 
 .chart-card img {
@@ -586,7 +626,64 @@ li {
     border-radius: 13px;
 
     box-shadow:
-        0 6px 20px rgba(40, 111, 145, 0.12);
+        0 8px 25px rgba(0, 0, 0, 0.6);
+}
+
+/* =========================
+   CITY FILTER
+   ========================= */
+
+.city-filter {
+    margin-bottom: 30px;
+
+    padding: 20px;
+
+    text-align: center;
+
+    background:
+        rgba(8, 13, 19, 0.9);
+
+    border:
+        1px solid rgba(255, 255, 255, 0.12);
+
+    border-radius: 18px;
+}
+
+.city-filter label {
+    color: #dddddd;
+
+    font-size: 16px;
+
+    font-weight: 600;
+
+    margin-right: 10px;
+}
+
+.city-filter select {
+    padding: 11px 18px;
+
+    min-width: 190px;
+
+    border:
+        1px solid rgba(255, 255, 255, 0.2);
+
+    border-radius: 10px;
+
+    background:
+        #10161e;
+
+    color: #ffffff;
+
+    font-size: 15px;
+
+    outline: none;
+}
+
+.city-filter select:focus {
+    border-color: #ff8a1c;
+
+    box-shadow:
+        0 0 12px rgba(255, 120, 20, 0.2);
 }
 
 /* =========================
@@ -610,7 +707,7 @@ li {
    ========================= */
 
 .result-card h2 {
-    color: #1685ba;
+    color: #ff8a1c;
 }
 
 .result-card > p {
@@ -660,8 +757,7 @@ li {
     h1 {
         font-size: 27px;
 
-        padding:
-            30px 15px 18px;
+        padding: 30px 15px 18px;
     }
 
     h2 {
@@ -700,6 +796,12 @@ li {
     .quality-container {
         grid-template-columns:
             1fr 1fr;
+    }
+
+    .city-filter select {
+        width: 100%;
+
+        margin-top: 10px;
     }
 
     .page-buttons {
