@@ -30,6 +30,39 @@
 
         <h2>Weather Overview</h2>
 
+        <div class="city-filter">
+
+            <form action="/analysis" method="GET">
+
+                <label for="city">
+                    🏙️ Select City:
+                </label>
+
+                <select name="city" id="city">
+
+                    <option value="">
+                        All Cities
+                    </option>
+
+                    {% for city in cities %}
+
+                    <option value="{{ city }}"
+                        {% if selected_city == city %}selected{% endif %}>
+                        {{ city }}
+                    </option>
+
+                    {% endfor %}
+
+                </select>
+
+                <button type="submit">
+                    View City
+                </button>
+
+            </form>
+
+        </div>
+
         <div class="summary-container">
 
             <div class="summary-card">
@@ -78,7 +111,9 @@
 
                 <tr>
 
-                    <td>{{ row.month }}</td>
+                    <td>
+                        {{ row.month }}
+                    </td>
 
                     <td>
                         {{ "%.2f"|format(row.average_temperature) }} °C
@@ -108,17 +143,60 @@
 
         </div>
 
+        <h2>🌦️ Weather Insights</h2>
+
+        <div class="summary-container">
+
+            <div class="summary-card">
+                <h3>🌡️ Hottest Month</h3>
+                <p>{{ hottest_month }}</p>
+            </div>
+
+            <div class="summary-card">
+                <h3>❄️ Coolest Month</h3>
+                <p>{{ coolest_month }}</p>
+            </div>
+
+            <div class="summary-card">
+                <h3>💧 Highest Humidity</h3>
+                <p>{{ highest_humidity_month }}</p>
+            </div>
+
+            <div class="summary-card">
+                <h3>🌧️ Highest Rainfall</h3>
+                <p>{{ highest_rainfall_month }}</p>
+            </div>
+
+            <div class="summary-card">
+                <h3>🔥 Highest Temperature</h3>
+                <p>{{ highest_temperature }} °C</p>
+            </div>
+
+            <div class="summary-card">
+                <h3>❄️ Lowest Temperature</h3>
+                <p>{{ lowest_temperature }} °C</p>
+            </div>
+
+            <div class="summary-card">
+                <h3>📏 Temperature Range</h3>
+                <p>{{ temperature_range }} °C</p>
+            </div>
+
+        </div>
+
         <h2>Weather Trends</h2>
 
         <div class="chart-card">
 
             <h3>🌡️ Monthly Average Temperature</h3>
 
-            <img src="{{ url_for(
-                'static',
-                filename='charts/temperature.png'
-            ) }}"
-            alt="Monthly Average Temperature">
+            <img
+                src="{{ url_for(
+                    'static',
+                    filename='charts/temperature.png'
+                ) }}?v={{ chart_version }}"
+                alt="Monthly Average Temperature"
+            >
 
         </div>
 
@@ -126,11 +204,13 @@
 
             <h3>💧 Monthly Average Humidity</h3>
 
-            <img src="{{ url_for(
-                'static',
-                filename='charts/humidity.png'
-            ) }}"
-            alt="Monthly Average Humidity">
+            <img
+                src="{{ url_for(
+                    'static',
+                    filename='charts/humidity.png'
+                ) }}?v={{ chart_version }}"
+                alt="Monthly Average Humidity"
+            >
 
         </div>
 
@@ -138,11 +218,13 @@
 
             <h3>🌧️ Monthly Total Rainfall</h3>
 
-            <img src="{{ url_for(
-                'static',
-                filename='charts/rainfall.png'
-            ) }}"
-            alt="Monthly Total Rainfall">
+            <img
+                src="{{ url_for(
+                    'static',
+                    filename='charts/rainfall.png'
+                ) }}?v={{ chart_version }}"
+                alt="Monthly Total Rainfall"
+            >
 
         </div>
 
@@ -151,4 +233,3 @@
 </body>
 
 </html>
-
