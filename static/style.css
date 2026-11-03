@@ -7,24 +7,24 @@
 body {
     min-height: 100vh;
     font-family: Arial, Helvetica, sans-serif;
-    color: #ffffff;
+    color: #17324d;
 
     background:
         radial-gradient(
             circle at 15% 15%,
-            rgba(255, 112, 0, 0.12),
-            transparent 25%
+            rgba(255, 255, 255, 0.95),
+            transparent 28%
         ),
         radial-gradient(
             circle at 85% 20%,
-            rgba(0, 140, 255, 0.10),
+            rgba(255, 255, 255, 0.8),
             transparent 25%
         ),
         linear-gradient(
             135deg,
-            #020305 0%,
-            #080d14 45%,
-            #030508 100%
+            #75cfff 0%,
+            #b9eaff 45%,
+            #f7fcff 100%
         );
 
     background-attachment: fixed;
@@ -45,12 +45,12 @@ nav {
     align-items: center;
     justify-content: space-between;
 
-    background: rgba(5, 8, 13, 0.92);
+    background: rgba(255, 255, 255, 0.82);
 
-    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.7);
 
     box-shadow:
-        0 5px 25px rgba(0, 0, 0, 0.7);
+        0 5px 25px rgba(35, 120, 170, 0.18);
 
     backdrop-filter: blur(15px);
     -webkit-backdrop-filter: blur(15px);
@@ -61,7 +61,7 @@ nav {
 }
 
 nav a {
-    color: #d7d7d7;
+    color: #24516e;
 
     text-decoration: none;
 
@@ -74,11 +74,11 @@ nav a {
 }
 
 nav a:hover {
-    color: #ff8a1c;
+    color: #087bb5;
 }
 
 nav a:first-child {
-    color: #ffffff;
+    color: #075b86;
 
     font-size: 20px;
     font-weight: 700;
@@ -90,16 +90,16 @@ nav a:first-child {
     background:
         linear-gradient(
             135deg,
-            rgba(255, 120, 20, 0.22),
-            rgba(255, 80, 0, 0.08)
+            rgba(75, 190, 245, 0.25),
+            rgba(255, 255, 255, 0.65)
         );
 
-    border: 1px solid rgba(255, 130, 30, 0.25);
+    border: 1px solid rgba(40, 160, 220, 0.25);
 }
 
 nav a:first-child:hover {
     background:
-        rgba(255, 120, 20, 0.3);
+        rgba(80, 190, 240, 0.35);
 }
 
 nav div {
@@ -117,7 +117,7 @@ h1 {
 
     padding: 45px 20px 25px;
 
-    color: #ffffff;
+    color: #123d59;
 
     font-size: 36px;
     font-weight: 700;
@@ -125,11 +125,11 @@ h1 {
     letter-spacing: 2px;
 
     text-shadow:
-        0 0 18px rgba(255, 255, 255, 0.15);
+        0 2px 10px rgba(255, 255, 255, 0.8);
 }
 
 h2 {
-    color: #ffffff;
+    color: #164866;
 
     margin-bottom: 20px;
 
@@ -137,7 +137,7 @@ h2 {
 }
 
 h3 {
-    color: #eeeeee;
+    color: #245873;
 
     margin-bottom: 10px;
 }
@@ -145,7 +145,7 @@ h3 {
 p {
     line-height: 1.7;
 
-    color: #c9c9c9;
+    color: #416579;
 }
 
 a {
@@ -157,7 +157,7 @@ a {
    ========================= */
 
 button {
-    border: 1px solid rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.7);
 
     outline: none;
 
@@ -172,8 +172,8 @@ button {
     background:
         linear-gradient(
             135deg,
-            #ff941f,
-            #e85d00
+            #20a9e8,
+            #087bb8
         );
 
     color: white;
@@ -185,7 +185,7 @@ button {
     font-weight: 600;
 
     box-shadow:
-        0 7px 20px rgba(255, 100, 0, 0.25);
+        0 7px 20px rgba(0, 120, 190, 0.25);
 
     transition: 0.25s ease;
 }
@@ -196,12 +196,12 @@ button:hover {
     background:
         linear-gradient(
             135deg,
-            #ffad42,
-            #f36b08
+            #42bdf0,
+            #0873ad
         );
 
     box-shadow:
-        0 12px 30px rgba(255, 100, 0, 0.4);
+        0 12px 30px rgba(0, 120, 190, 0.35);
 }
 
 button:active {
@@ -225,18 +225,18 @@ button:active {
     background:
         linear-gradient(
             145deg,
-            rgba(255, 111, 0, 0.18),
-            rgba(255, 70, 0, 0.08)
+            rgba(255, 255, 255, 0.82),
+            rgba(225, 246, 255, 0.72)
         );
 
     border:
-        1px solid rgba(255, 125, 30, 0.4);
+        1px solid rgba(255, 255, 255, 0.9);
 
     border-radius: 28px;
 
     box-shadow:
-        0 20px 60px rgba(0, 0, 0, 0.7),
-        0 0 35px rgba(255, 90, 0, 0.12);
+        0 20px 60px rgba(30, 120, 170, 0.2),
+        0 0 35px rgba(80, 190, 240, 0.12);
 
     backdrop-filter: blur(15px);
     -webkit-backdrop-filter: blur(15px);
@@ -249,7 +249,7 @@ button:active {
 
     margin-bottom: 18px;
 
-    color: #ffffff;
+    color: #12567d;
 }
 
 .dashboard-card p {
@@ -257,7 +257,7 @@ button:active {
 
     margin: 0 auto 25px;
 
-    color: #d0d0d0;
+    color: #416579;
 }
 
 .dashboard-card form {
@@ -266,18 +266,21 @@ button:active {
     padding: 32px;
 
     background:
-        rgba(5, 9, 15, 0.75);
+        rgba(255, 255, 255, 0.65);
 
     border:
-        1px solid rgba(255, 255, 255, 0.12);
+        1px solid rgba(255, 255, 255, 0.9);
 
     border-radius: 20px;
+
+    box-shadow:
+        0 8px 25px rgba(30, 120, 170, 0.1);
 }
 
 .dashboard-card form h3 {
     font-size: 20px;
 
-    color: #ffffff;
+    color: #155577;
 }
 
 /* =========================
@@ -295,14 +298,14 @@ input[type="file"] {
     padding: 15px;
 
     background:
-        rgba(255, 255, 255, 0.06);
+        rgba(255, 255, 255, 0.8);
 
     border:
-        2px dashed rgba(255, 133, 30, 0.55);
+        2px dashed rgba(30, 160, 220, 0.55);
 
     border-radius: 13px;
 
-    color: #dddddd;
+    color: #356078;
 
     cursor: pointer;
 
@@ -310,13 +313,13 @@ input[type="file"] {
 }
 
 input[type="file"]:hover {
-    border-color: #ff8a1c;
+    border-color: #0796d2;
 
     background:
-        rgba(255, 120, 20, 0.08);
+        rgba(225, 248, 255, 0.9);
 
     box-shadow:
-        0 0 20px rgba(255, 120, 20, 0.15);
+        0 0 20px rgba(30, 160, 220, 0.15);
 }
 
 /* =========================
@@ -353,17 +356,17 @@ input[type="file"]:hover {
     background:
         linear-gradient(
             145deg,
-            rgba(20, 25, 32, 0.95),
-            rgba(5, 9, 14, 0.95)
+            rgba(255, 255, 255, 0.9),
+            rgba(230, 248, 255, 0.8)
         );
 
     border:
-        1px solid rgba(255, 255, 255, 0.12);
+        1px solid rgba(255, 255, 255, 0.9);
 
     border-radius: 18px;
 
     box-shadow:
-        0 12px 35px rgba(0, 0, 0, 0.6);
+        0 12px 35px rgba(30, 120, 170, 0.16);
 
     transition: 0.25s ease;
 
@@ -375,23 +378,23 @@ input[type="file"]:hover {
     transform: translateY(-5px);
 
     border-color:
-        rgba(255, 125, 30, 0.55);
+        rgba(30, 160, 220, 0.45);
 
     box-shadow:
-        0 16px 40px rgba(0, 0, 0, 0.7),
-        0 0 20px rgba(255, 100, 0, 0.12);
+        0 16px 40px rgba(30, 120, 170, 0.22),
+        0 0 20px rgba(50, 180, 230, 0.12);
 }
 
 .summary-card h3 {
     font-size: 15px;
 
-    color: #bcbcbc;
+    color: #527488;
 }
 
 .summary-card p {
     margin-top: 10px;
 
-    color: #ff8a1c;
+    color: #0784c1;
 
     font-size: 27px;
 
@@ -410,15 +413,15 @@ input[type="file"]:hover {
     padding: 32px;
 
     background:
-        rgba(10, 15, 22, 0.92);
+        rgba(255, 255, 255, 0.82);
 
     border:
-        1px solid rgba(255, 255, 255, 0.12);
+        1px solid rgba(255, 255, 255, 0.9);
 
     border-radius: 21px;
 
     box-shadow:
-        0 15px 40px rgba(0, 0, 0, 0.65);
+        0 15px 40px rgba(30, 120, 170, 0.18);
 
     overflow-x: auto;
 
@@ -449,32 +452,35 @@ input[type="file"]:hover {
     background:
         linear-gradient(
             145deg,
-            rgba(30, 35, 42, 0.95),
-            rgba(7, 11, 16, 0.95)
+            rgba(255, 255, 255, 0.9),
+            rgba(225, 247, 255, 0.82)
         );
 
     border:
-        1px solid rgba(255, 255, 255, 0.12);
+        1px solid rgba(255, 255, 255, 0.9);
 
     border-radius: 16px;
 
     transition: 0.25s ease;
+
+    box-shadow:
+        0 8px 25px rgba(30, 120, 170, 0.12);
 }
 
 .quality-card:hover {
     transform: translateY(-4px);
 
     border-color:
-        rgba(255, 130, 30, 0.45);
+        rgba(30, 160, 220, 0.45);
 
     box-shadow:
-        0 10px 28px rgba(0, 0, 0, 0.65);
+        0 10px 28px rgba(30, 120, 170, 0.2);
 }
 
 .quality-card h3 {
     font-size: 15px;
 
-    color: #bbbbbb;
+    color: #527488;
 }
 
 .quality-card p {
@@ -484,7 +490,7 @@ input[type="file"]:hover {
 
     font-weight: bold;
 
-    color: #ff8a1c;
+    color: #0784c1;
 }
 
 /* =========================
@@ -499,14 +505,14 @@ table {
     min-width: 700px;
 
     background:
-        #080c12;
+        rgba(255, 255, 255, 0.95);
 
     border-radius: 13px;
 
     overflow: hidden;
 
     box-shadow:
-        0 5px 20px rgba(0, 0, 0, 0.5);
+        0 5px 20px rgba(30, 120, 170, 0.15);
 }
 
 th {
@@ -515,8 +521,8 @@ th {
     background:
         linear-gradient(
             135deg,
-            #ff8a1c,
-            #d94f00
+            #20a9e8,
+            #087bb8
         );
 
     color: white;
@@ -531,22 +537,22 @@ td {
 
     text-align: center;
 
-    color: #d2d2d2;
+    color: #35586c;
 
     border-bottom:
-        1px solid rgba(255, 255, 255, 0.08);
+        1px solid rgba(30, 120, 170, 0.1);
 
     font-size: 14px;
 }
 
 tr:nth-child(even) {
     background:
-        rgba(255, 255, 255, 0.025);
+        rgba(80, 190, 235, 0.06);
 }
 
 tr:hover {
     background:
-        rgba(255, 120, 20, 0.08);
+        rgba(60, 180, 235, 0.12);
 }
 
 /* =========================
@@ -562,7 +568,7 @@ ul {
 li {
     margin: 8px 0;
 
-    color: #cccccc;
+    color: #416579;
 }
 
 /* =========================
@@ -581,27 +587,27 @@ li {
     background:
         linear-gradient(
             145deg,
-            rgba(12, 17, 24, 0.96),
-            rgba(4, 7, 11, 0.96)
+            rgba(255, 255, 255, 0.9),
+            rgba(225, 247, 255, 0.82)
         );
 
     border:
-        1px solid rgba(255, 255, 255, 0.12);
+        1px solid rgba(255, 255, 255, 0.9);
 
     border-radius: 21px;
 
     box-shadow:
-        0 15px 40px rgba(0, 0, 0, 0.65);
+        0 15px 40px rgba(30, 120, 170, 0.18);
 
     transition: 0.25s ease;
 }
 
 .chart-card:hover {
     border-color:
-        rgba(255, 125, 30, 0.4);
+        rgba(30, 160, 220, 0.4);
 
     box-shadow:
-        0 18px 45px rgba(0, 0, 0, 0.75);
+        0 18px 45px rgba(30, 120, 170, 0.22);
 }
 
 .chart-card h3 {
@@ -609,7 +615,7 @@ li {
 
     font-size: 19px;
 
-    color: #ffffff;
+    color: #155577;
 }
 
 .chart-card img {
@@ -626,7 +632,7 @@ li {
     border-radius: 13px;
 
     box-shadow:
-        0 8px 25px rgba(0, 0, 0, 0.6);
+        0 8px 25px rgba(30, 120, 170, 0.2);
 }
 
 /* =========================
@@ -641,16 +647,19 @@ li {
     text-align: center;
 
     background:
-        rgba(8, 13, 19, 0.9);
+        rgba(255, 255, 255, 0.78);
 
     border:
-        1px solid rgba(255, 255, 255, 0.12);
+        1px solid rgba(255, 255, 255, 0.9);
 
     border-radius: 18px;
+
+    box-shadow:
+        0 8px 25px rgba(30, 120, 170, 0.12);
 }
 
 .city-filter label {
-    color: #dddddd;
+    color: #315b72;
 
     font-size: 16px;
 
@@ -665,14 +674,14 @@ li {
     min-width: 190px;
 
     border:
-        1px solid rgba(255, 255, 255, 0.2);
+        1px solid rgba(30, 140, 200, 0.25);
 
     border-radius: 10px;
 
     background:
-        #10161e;
+        #ffffff;
 
-    color: #ffffff;
+    color: #24516e;
 
     font-size: 15px;
 
@@ -680,10 +689,10 @@ li {
 }
 
 .city-filter select:focus {
-    border-color: #ff8a1c;
+    border-color: #0796d2;
 
     box-shadow:
-        0 0 12px rgba(255, 120, 20, 0.2);
+        0 0 12px rgba(30, 160, 220, 0.2);
 }
 
 /* =========================
@@ -707,7 +716,7 @@ li {
    ========================= */
 
 .result-card h2 {
-    color: #ff8a1c;
+    color: #087bb8;
 }
 
 .result-card > p {
@@ -859,4 +868,3 @@ li {
         justify-content: center;
     }
 }
-
